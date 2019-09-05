@@ -1,0 +1,17 @@
+export const FIELD_MOUSE_MOVE = "FIELD_MOUSE_MOVE";
+export type FIELD_MOUSE_MOVE = typeof FIELD_MOUSE_MOVE;
+
+export const FIELD_CLICK = "FIELD_CLICK";
+export type FIELD_CLICK = typeof FIELD_CLICK;
+
+export const SEND_PLAY_COMMAND = "SEND_PLAY_COMMAND";
+export type SEND_PLAY_COMMAND = typeof SEND_PLAY_COMMAND;
+
+export const NEXT_GENERATION = "NEXT_GENERATION";
+export type NEXT_GENERATION = typeof NEXT_GENERATION;
+
+export const CLEAR_CLICKED = "CLEAR_CLICKED";
+export type CLEAR_CLICKED = typeof CLEAR_CLICKED;
+
+export const PATTERN_CHANGED = "PATTERN_CHANGED";
+export type PATTERN_CHANGED = typeof PATTERN_CHANGED;
