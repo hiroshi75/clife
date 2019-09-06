@@ -1,16 +1,16 @@
 import { combineReducers } from 'redux';
 import hover from './hover';
 import field from './field';
-import cells from './cells';
+import app from './app';
 import controlButtons from './controlButtons';
 import patternSelector from './patternSelector';
 
 export const rootReducer = combineReducers({
     field,
-    cells,
     hover,
     controlButtons,
-    patternSelector
+    patternSelector,
+    app
   });
 
 export type StoreState = ReturnType<typeof rootReducer>

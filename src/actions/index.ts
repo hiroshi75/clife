@@ -57,7 +57,16 @@ export const onPatternChanged = (selectedType: number):PatternChanged =>({
     selectedType: selectedType
 })
 
+export interface ScreenSizeChanged{
+    type: actionTypes.SCREEN_SIZE_CHANGED;
+    size: {x:number; y:number;};
+}
+export const onScreenSizeChanged = (x:number, y:number): ScreenSizeChanged =>({
+    type:actionTypes.SCREEN_SIZE_CHANGED,
+    size: {x,y}
+})
+
 export type ClifeAction = FieldMouseMove | FieldClick | SendPlayCommand
-     | NextGeneration | ClearClicked | PatternChanged;
+     | NextGeneration | ClearClicked | PatternChanged | ScreenSizeChanged;
 
 

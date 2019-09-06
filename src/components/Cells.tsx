@@ -1,18 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 
 import { StoreState } from '../reducers';
-import { CellsState } from '../types';
 
 export interface Props {
     rectSize: number;
-    cellsState: CellsState;
 }
 
 const  Cells =(props: Props)=>{
+    let fieldState = useSelector((state:StoreState)=>state.field);
     const rectSize = props.rectSize;
 
-    const cellsElement = props.cellsState.cells.map(({x, y}, index)=>{
+    const cellsElement = fieldState.cells.map(({x, y}, index)=>{
         
         const rx = x * rectSize;
         const ry = y * rectSize;
@@ -28,7 +27,4 @@ const  Cells =(props: Props)=>{
     return (<g>{ cellsElement }</g>);
 };
 
-const mapStateToProps = (state: StoreState) =>{
-    return { cellsState:state.cells }; 
-}
-export default connect(mapStateToProps)(Cells);
+export default Cells;

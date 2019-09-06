@@ -1,5 +1,5 @@
 import { CellPattern } from "./CellPatterns";
-import { CellsState, CellType } from "../types";
+import {  CellType } from "../types";
 
 const pastePattern = (cellPattern:CellPattern): CellType[] => {
     const { pattern, position } = cellPattern;
@@ -8,7 +8,7 @@ const pastePattern = (cellPattern:CellPattern): CellType[] => {
     pattern.forEach(row =>{
         let cx = x;
         for(let i=0;i<row.length;i++){
-            if(row[i]=="X"){
+            if(row[i]==="X"){
                 cells.push({x:cx, y})
             }
             cx++;

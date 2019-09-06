@@ -1,42 +1,31 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
 
 import { HoverState } from '../types';
 import { StoreState } from '../reducers';
 
 interface Props{
-    hover: HoverState;
     rectSize: number;
 }
 const style={ fill: "red" };
 
-class Hover extends React.Component<Props,StoreState>{
+const Hover = (props:Props)=>{
+    const state = useSelector((state: StoreState)=>state.hover);
+    const {x, y, show} = state;
+    const { rectSize } = props;
 
-    constructor(props: Props){
-        super(props);
+    if(show){
+        return (<rect 
+            width={rectSize}
+            height={rectSize}
+            x={x*rectSize}
+            y={y*rectSize}
+            style={style}
+        />);
+    } else{
+        return null;
     }
-    render(){
-        const {x, y, show} = this.props.hover;
-        const { rectSize } = this.props;
-
-        if(show){
-            return (<rect 
-                width={rectSize}
-                height={rectSize}
-                x={x*rectSize}
-                y={y*rectSize}
-                style={style}
-            />);
-        } else{
-            return null;
-        }
-    }
+    
 };
 
-const mapStateToProps = (state: StoreState) => {
-    return { hover:state.hover };    
-};
-
-export default connect(
-    mapStateToProps
-)(Hover);
+export default Hover;

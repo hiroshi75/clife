@@ -1,4 +1,3 @@
-import * as actionTypes from '../types/actionTypes';
 import { ClifeAction } from '../actions';
 
 const initialState = {
