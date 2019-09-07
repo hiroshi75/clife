@@ -2,6 +2,7 @@
   "name": "clife",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hiroshi75.github.io/clife",
   "dependencies": {
     "@material-ui/core": "^4.4.0",
     "@types/jest": "^24.0.18",
