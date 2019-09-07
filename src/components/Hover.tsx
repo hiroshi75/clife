@@ -1,25 +1,21 @@
 import React from 'react';
-import { connect, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-import { HoverState } from '../types';
+import { RECT_SIZE } from '../types';
 import { StoreState } from '../reducers';
 
-interface Props{
-    rectSize: number;
-}
 const style={ fill: "red" };
 
-const Hover = (props:Props)=>{
+const Hover = ()=>{
     const state = useSelector((state: StoreState)=>state.hover);
     const {x, y, show} = state;
-    const { rectSize } = props;
 
     if(show){
         return (<rect 
-            width={rectSize}
-            height={rectSize}
-            x={x*rectSize}
-            y={y*rectSize}
+            width={RECT_SIZE}
+            height={RECT_SIZE}
+            x={x*RECT_SIZE}
+            y={y*RECT_SIZE}
             style={style}
         />);
     } else{

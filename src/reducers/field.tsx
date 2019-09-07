@@ -1,23 +1,27 @@
-import * as actionTypes from '../types/actionTypes';
+import * as actionTypes from '../types/action';
 import { ClifeAction, FieldClick, SendPlayCommand } from '../actions';
-import { FieldState, CellType } from '../types';
-import nextGeneration from '../utils/NextGeneration';
-import pastePattern from '../utils/PatternPaster';
-import cellPatterns from '../utils/CellPatterns';
+import nextGeneration from '../utils/nextGeneration';
+import pastePattern from '../utils/patternPaster';
+import cellPatterns from '../utils/cellPatterns';
+import { CellType } from '../types';
+import { FieldState } from '../types/states';
+import { getGridSize } from '../utils/sizeLib';
 
 
 const initiasState = {
     playing:false,
     zoom: 1.0,
-    x: 0,
-    y: 0,
+    gridx: 0,
+    gridy: 0,
     cells: [] as CellType[]
 };
 
 
-const field = (state: FieldState=initiasState, action: ClifeAction)=>{
+const field = (state: FieldState=initiasState, action: ClifeAction): FieldState=>{
     if(action.type===actionTypes.SCREEN_SIZE_CHANGED){
-        return {...state, ...action.size}
+        const s = action.size;
+        const {gridx, gridy} = getGridSize(s);
+        return {...state, ...{gridx, gridy}}
     }if(action.type===actionTypes.SEND_PLAY_COMMAND){
         return {...state, playing:action.play};
     }else if(action.type===actionTypes.FIELD_CLICK){

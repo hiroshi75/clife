@@ -1,5 +1,5 @@
-import * as actionTypes from '../types/actionTypes';
-import { GridPoint } from '../types/GeneralTypes';
+import * as actionTypes from '../types/action';
+import { GridPoint } from '../types';
 
 export interface FieldMouseMove{
     type: actionTypes.FIELD_MOUSE_MOVE;

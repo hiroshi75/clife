@@ -1,26 +1,22 @@
 import React from 'react';
-import { connect, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { StoreState } from '../reducers';
+import { RECT_SIZE } from '../types';
 
-export interface Props {
-    rectSize: number;
-}
-
-const  Cells =(props: Props)=>{
+const  Cells =()=>{
     let fieldState = useSelector((state:StoreState)=>state.field);
-    const rectSize = props.rectSize;
 
     const cellsElement = fieldState.cells.map(({x, y}, index)=>{
         
-        const rx = x * rectSize;
-        const ry = y * rectSize;
+        const rx = x * RECT_SIZE;
+        const ry = y * RECT_SIZE;
 
         return (<rect key={ index } 
                     x={ rx } 
                     y={ ry } 
-                    width={ rectSize } 
-                    height={ rectSize } 
+                    width={ RECT_SIZE } 
+                    height={ RECT_SIZE } 
                     className="cell" />);
 
     });

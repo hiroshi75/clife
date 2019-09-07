@@ -1,10 +1,16 @@
-import { GridPoint } from "../types/GeneralTypes";
+
+
+export type XPositionType = "left" | "center" | "right";
+export type YPositionType = "top" | "center" | "bottom";
 
 export interface CellPattern{
     name: string;
     pattern: string[];
-    position: GridPoint;
-}
+    position: {
+        x: XPositionType,
+        y: YPositionType
+    };
+};
 
 const cellPatterns: CellPattern[]=[
     {
@@ -20,24 +26,24 @@ const cellPatterns: CellPattern[]=[
             "           X   X",
             "            XX"
         ],
-        position: {x:3, y:3}},
+        position: {x:"left", y:"top"}},
     {
         name: "Glider",
         pattern: [
+            " X",
+            "  X",
             "XXX",
-            "X",
-            " X"
         ],
-        position: {x:100, y:50}},
+        position: {x:"left", y:"top"}},
     {
         name: "Light-weight spaceship",
         pattern: [
-            " X  X",
-            "X",
+            "X  X",
+            "    X",
             "X   X",
-            "XXXX"
+            " XXXX"
         ],
-        position: {x:100, y:50}},
+        position: {x:"left", y:"top"}},
     {
         name: "Acorn",
         pattern: [
@@ -45,7 +51,15 @@ const cellPatterns: CellPattern[]=[
             "   X",
             "XX  XXX",
         ],
-        position: {x:75, y:50}},
+        position: {x:"center", y:"center"}},
+    {
+        name: "R-pentomino",
+        pattern: [
+            " XX",
+            "XX",
+            " X",
+        ],
+        position: {x:"center", y:"center"}},
 ];
 
 export default cellPatterns;

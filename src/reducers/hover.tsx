@@ -1,6 +1,6 @@
-import * as actionTypes from '../types/actionTypes';
+import * as actionTypes from '../types/action';
 import { ClifeAction, FieldMouseMove } from '../actions';
-import { HoverState } from '../types';
+import { HoverState } from '../types/states';
 
 const initialState = {x:0, y:0, show:true};
 

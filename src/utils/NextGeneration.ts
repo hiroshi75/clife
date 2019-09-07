@@ -16,6 +16,7 @@ const addAdjacent=(adjacentCount: GridNumMap, x: number, y: number): void =>{
 };
 
 const nextGeneration = (cells:Cells, gridSize: {x:number,y:number}): Cells=>{
+    console.log(gridSize);
     const adjacentCount: GridNumMap = {};
     const currentCellIndex: GridNumMap = {};
     for(let {x,y} of cells){
@@ -37,6 +38,7 @@ const nextGeneration = (cells:Cells, gridSize: {x:number,y:number}): Cells=>{
             const c = adjacentCount[sx][sy];
             const x = parseInt(sx);
             const y = parseInt(sy);
+            if(x>=gridSize.x || y>=gridSize.y){ continue; }
             if(c===BIRTH_NUM){
                 newCells.push({x, y});
             }else if(c===SURVIVE_NUM && currentCellIndex[x] && currentCellIndex[x][y]){

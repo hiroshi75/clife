@@ -1,16 +1,10 @@
-import * as actionTypes from '../types/actionTypes';
-import { ClifeAction, ScreenSizeChanged } from '../actions';
-import { AppState, RECT_SIZE } from '../types';
-import getGridsize from '../utils/GetGridSize';
+import * as actionTypes from '../types/action';
+import { ClifeAction } from '../actions';
+import { getWindowSize } from '../utils/sizeLib';
+import { AppState } from '../types/states';
 
-
-const getWindowSize = ()=>({
-    windowX: document.documentElement.clientWidth,
-    windowY: document.documentElement.clientHeight
-});
-
-const initiasState = getWindowSize();
-
+const windowSize = getWindowSize();
+const initiasState = {windowX: windowSize.x, windowY: windowSize.y};
 
 const app = (state: AppState=initiasState, action: ClifeAction): AppState=>{
     if(action.type===actionTypes.SCREEN_SIZE_CHANGED){
