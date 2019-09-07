@@ -1,3 +1,18 @@
+# Conway's Game of Life
+This project is an example of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) with React, Redux and Typescript.
+
+The working example: https://hiroshi75.github.io/clife/
+
+# How to use
+1. Place cell by clicking any grid.
+2. When you are done, press "Start" button. The cells will start generation.
+3. To stop it, press "Stop" button.
+4. To clear the cells, press "Clear" button.
+5. To place complicated cells such as "Glider Gun", select from the "Paste pattern" pull down.
+
+This application was first intended for PC. On iPhone, tapping the grid makes you place the cells. But it might be a bit difficult to place them on exact position you tap.
+
+# For Developpers
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
