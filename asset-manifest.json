@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/clife/static/css/main.702def39.chunk.css",
-    "main.js": "/clife/static/js/main.e09470d9.chunk.js",
-    "main.js.map": "/clife/static/js/main.e09470d9.chunk.js.map",
+    "main.js": "/clife/static/js/main.c5b4d583.chunk.js",
+    "main.js.map": "/clife/static/js/main.c5b4d583.chunk.js.map",
     "runtime~main.js": "/clife/static/js/runtime~main.a9eda8c1.js",
     "runtime~main.js.map": "/clife/static/js/runtime~main.a9eda8c1.js.map",
     "static/js/2.c52c8615.chunk.js": "/clife/static/js/2.c52c8615.chunk.js",
     "static/js/2.c52c8615.chunk.js.map": "/clife/static/js/2.c52c8615.chunk.js.map",
     "index.html": "/clife/index.html",
-    "precache-manifest.3fd73b1d6647f6733ec1aae11833b9c9.js": "/clife/precache-manifest.3fd73b1d6647f6733ec1aae11833b9c9.js",
+    "precache-manifest.e437fb73b659e93675cca6128ea32fd7.js": "/clife/precache-manifest.e437fb73b659e93675cca6128ea32fd7.js",
     "service-worker.js": "/clife/service-worker.js",
     "static/css/main.702def39.chunk.css.map": "/clife/static/css/main.702def39.chunk.css.map"
   }
