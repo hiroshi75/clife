@@ -16,7 +16,6 @@ const addAdjacent=(adjacentCount: GridNumMap, x: number, y: number): void =>{
 };
 
 const nextGeneration = (cells:Cells, gridSize: {x:number,y:number}): Cells=>{
-    console.log(gridSize);
     const adjacentCount: GridNumMap = {};
     const currentCellIndex: GridNumMap = {};
     for(let {x,y} of cells){
