@@ -5,14 +5,14 @@ import pastePattern from '../utils/patternPaster';
 import cellPatterns from '../utils/cellPatterns';
 import { CellType } from '../types';
 import { FieldState } from '../types/states';
-import { getGridSize } from '../utils/sizeLib';
+import { getGridSize, getCurrentGridSize } from '../utils/sizeLib';
 
-
+const {gridx, gridy} = getCurrentGridSize();
 const initiasState = {
     playing:false,
     zoom: 1.0,
-    gridx: 0,
-    gridy: 0,
+    gridx: gridx,
+    gridy: gridy,
     cells: [] as CellType[]
 };
 
