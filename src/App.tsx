@@ -7,9 +7,8 @@ import ContrtolButtons from "./components/ContrtolButtons"
 
 import './App.css';
 import PatternSelector from './components/PatternSelector';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { onScreenSizeChanged, onSendPlayCommand } from './actions';
-import {StoreState} from './reducers';
 import { getWindowSize } from './utils/sizeLib';
 
 
@@ -17,10 +16,7 @@ import { getWindowSize } from './utils/sizeLib';
 function App() {
 
   const dispatch = useDispatch()
-  const appState = useSelector((state: StoreState) => state.app);
-
   useEffect(()=>{
-      dispatch(onScreenSizeChanged(appState.windowX, appState.windowY));
 
     const handler = ()=>{
       const {x, y} = getWindowSize();
