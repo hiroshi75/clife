@@ -1,5 +1,5 @@
 import * as actionTypes from '../types/action';
-import { ClifeAction, FieldClick, SendPlayCommand } from '../actions';
+import { ClifeAction, FieldClick } from '../actions';
 import nextGeneration from '../utils/nextGeneration';
 import pastePattern from '../utils/patternPaster';
 import cellPatterns from '../utils/cellPatterns';

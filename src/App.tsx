@@ -33,7 +33,8 @@ function App() {
     <div>
     <Grid container alignItems='center' spacing={1}>
       <Grid item>
-        <img src="gameoflife_mini.png" width="145" height="50" alt="Game of Life"/>
+        <img src="gameoflife_mini.png" width="145" height="50" 
+          alt="Game of Life"/>
       </Grid>
       <Grid item>
         <ContrtolButtons/>
