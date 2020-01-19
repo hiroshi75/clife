@@ -8,7 +8,7 @@ import { RECT_SIZE, MSEC_PER_GENERATION} from '../types'
 import { StoreState } from '../reducers';
 
 import "./Style.css"
-import getGridSize, { getCurrentGridSize } from '../utils/sizeLib';
+import getGridSize from '../utils/sizeLib';
 
 interface BoundingRect{ left:number; top:number;};
 
